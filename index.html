@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style-index.css">
+    <title>Document</title>
+    <script src="js/Factory.js"></script>
+
+
+</head>
+<body>
+    <section class="home container-center">
+        <div class="logo">
+            <img src="img/LogoPngPurple.png" alt="">
+        </div>
+        <div class="botoes center-column">
+            <a class="btn back-roxo color-branco center-column"  href="cliente/home.html" id="BuscarProfissionais">
+                <div class="aux center-row" style="pointer-events: none">
+                    <p style="pointer-events: none">Buscar Profissionais</p>
+                    <img style="pointer-events: none" src="img/pesquisar.png" alt="">
+                </div>
+            </a>
+            <a class="btn back-laranja color-branco center-column" id="SouProfissional">
+                <div class="aux center-row" style="pointer-events: none" >
+                    <p style="pointer-events: none">Sou um profissional</p>
+                    <img style="pointer-events: none" src="img/IconeChaveFendaBlack.png" alt="">
+                </div>
+            </a>
+        </div>
+
+    </section>
+    <script>
+        let BuscarProfissionais = document.querySelector("#BuscarProfissionais");
+        let SouProfissional = document.querySelector("#SouProfissional");
+        let p = new perfil();
+        p.identificarPerfil();
+        buttonGo(SouProfissional,"login.html")
+        buttonGo(BuscarProfissionais,"cliente/home.html")
+    </script>
+</body>
+</html>

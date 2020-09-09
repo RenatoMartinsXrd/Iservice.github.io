@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style-index.css">
+    <script src="js/Factory.js"></script>
+    <title>Document</title>
+</head>
+<body class="login">
+    
+    <header class="center-row header-1">
+        <!-- <div class="toggle"></div> -->
+        <img src="img/SetaVoltar.png" alt="" class="voltar" style="margin-top:20px;">
+        
+    </header>
+    <section class="home container-center">
+        <div class="logo">
+            <img src="img/LogoPngBlack.png" alt="">
+        </div>
+        <div class="botoes center-column">
+          
+                <input type="text" class="input" placeholder="Usuario">
+                <input type="password" class="input" placeholder="Senha" >
+
+                <a id="entrar-login">Entrar</a>
+             
+    
+           
+        </div>
+
+    </section>
+
+    <script>
+        let voltar = document.querySelector(".login img.voltar");
+        let entrar = document.querySelector("#entrar-login");
+    
+        if(sessionStorage.getItem("perfil-logado")=="BuscarProfissionais"){
+            console.log("PERFIL CLIENTE LOGADO");
+            buttonGo(voltar,"cliente/home.html");
+            buttonGo(entrar,"cliente/perfil-contratante-logado.html")
+        }else if(sessionStorage.getItem("perfil-logado")=="SouProfissional"){
+            console.log("PERFIL PROFISSIONAL LOGADO");
+            buttonGo(voltar,"index.html")
+            buttonGo(entrar,"profissional/perfil-profissional.html")
+        }
+        
+   
+        
+    </script>
+</body>
+</html>

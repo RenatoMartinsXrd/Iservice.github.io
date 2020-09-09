@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style-avaliacao.css">
+    <script src="../js/Factory.js"></script>
+    <title>Document</title>
+</head>
+<body class="back-branco avaliacoes">
+    
+    <section class="menu-mobile">
+        
+        <div class="content-2 center-row">
+            <img src="../img/perfil.png" alt="">
+            <div class="aux-2">
+                <p>Kerri Barber</p>
+                <a href="" class="editar-perfil">Ver Portfolio</a>
+            </div>
+           
+            <!-- <img src="../img/cancel.svg"" alt="" class="cancel"> -->
+            <img src="../img/SetaVoltar.png" alt="" class="voltar">
+        </div>
+
+        
+        <ul class="opcoes">
+            <li ><img src="../img/avaliacoes/atendimento.png" alt="">
+            <div><p>Atendimento</p> <img src="../img/avaliacoes/nota.png" alt="" srcset=""></div></li>
+           
+
+            <li><img src="../img/avaliacoes/servicos.png" alt="">
+                <div> <p>Qualidade dos serviços</p>  <img src="../img/avaliacoes/nota.png" alt="" srcset="">  </div></li>
+           
+
+            <li><img src="../img/avaliacoes/orcamento.png" alt="">
+                <div><p>Orçamento</p><img src="../img/avaliacoes/nota.png" alt="" srcset="">  </div></li>
+       
+          
+
+        </ul>
+    </section>
+
+  
+
+
+</body>
+<script>
+    let voltar = document.querySelector(".voltar");
+    let menu = document.querySelector(".toggle");
+    let menu_mobile = document.querySelector(".menu-mobile-deslogado");
+    let icone_busca = document.querySelector(".icone");
+    let logar = document.querySelector(".logar");
+    // let fechar = document.querySelector(".cancel");
+    if(sessionStorage.getItem("avaliacao-logado")=="logado"){
+        buttonGo(voltar,"perfil-contratante-logado.html")
+    }else if(sessionStorage.getItem("avaliacao-logado")=="deslogado"){
+        buttonGo(voltar,"pesquisa.html")
+    }
+    
+</script>
+</html>

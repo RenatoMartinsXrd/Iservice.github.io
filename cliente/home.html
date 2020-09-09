@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+      <link rel="stylesheet" href="../css/style-home.css">
+    <script src="../js/Factory.js"></script>
+    <title>Document</title>
+</head>
+<body class="back-roxo home-cliente">
+    <header class="container-navigation-menu">
+        <div class="navigation-menu">
+            <div class="toggle"></div>
+            <img src="../img/SetaVoltar.png" alt="" class="voltar">
+        </div>
+    </header>
+
+    <section class="container-center">
+        <div class="content center-column">
+            <p>Do que voce <br> precisa?</p>
+            <div class="aux">
+            <input type="text" name="" id="" class="input">
+            <img src="../img/pesquisar-input.png" alt="" class="icone">
+
+            <div class="login-filtrar center-row">
+                <p class="logar">Login</p>
+                <div></div>
+                <p class="filtrar">Filtrar</p>
+            </div>
+            </div>
+
+        </div>
+
+
+        
+  
+
+    </section>
+
+    <section class="menu-mobile-deslogado">
+        <div class="content-2 center-row">
+            <img src="../img/perfil.png" alt="">
+            <div class="aux-2">
+                <p>Voce não esta logado</p>
+                <a href="">Acessar <br> conta</a>
+            </div>
+            <!-- <img src="../img/cancel.svg"" alt="" class="cancel"> -->
+        </div>
+
+        <ul class="opcoes">
+            <li><img src="../img/icon-busca.png" alt="">
+            <p>Busca</p></li>
+            <li><img src="../img/icon-chat.png" alt="">
+             <p>Chat</p></li>
+            <li><img src="../img/icon-meu-perfil.png" alt="">
+            <p>Meu Perfil</p></li>
+            <li><img src="../img/icone-chave.png" alt="">
+            <p>Quero Workar</p></li>
+        </ul>
+    </section>
+
+
+</body>
+<script>
+    let volte = document.querySelector(".home-cliente img.voltar");
+    let menu = document.querySelector(".toggle");
+    let menu_mobile = document.querySelector(".menu-mobile-deslogado");
+    let logar = document.querySelector(".logar");
+    let filtrar = document.querySelector(".filtrar");
+    let icone_busca = document.querySelector(".icone");
+    buttonGo(volte,"../index.html");
+    buttonGo(logar,"../login.html");
+    buttonGo(icone_busca,"pesquisa.html");
+    // buttonGo(filtrar,"perfil-contratante.html");
+    showMenuHamburguer(menu,menu_mobile);
+
+    document.addEventListener("keydown",(evt)=>{
+        if(evt.keyCode == "13"){  //enter
+           document.location.replace("pesquisa.html");
+        }
+    })
+    
+</script>
+</html>
